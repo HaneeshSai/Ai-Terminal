@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import inquirer from "inquirer";
 import chalkAnimation from "chalk-animation";
 import chalk from "chalk";
@@ -5,7 +7,7 @@ import { createSpinner } from "nanospinner";
 import { HfInference } from "@huggingface/inference";
 
 const hf = new HfInference("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");
-const sleep = (ms = 2000) => new Promise((r) => setTimeout(r, ms));
+const sleep = (ms = 1000) => new Promise((r) => setTimeout(r, ms));
 const welcome = async () => {
   const rainbow = chalkAnimation.rainbow("HEYY! I am an AI Terminal").start();
   console.log("type .clear and .exit to clear and exit the session");
